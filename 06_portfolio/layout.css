@@ -1,0 +1,500 @@
+/* --------------------------  MENY WEB ------------------------ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 2% 2% 2%;
+  font-family: "Italiana", sans-serif;
+}
+
+.menu_logo img {
+  width: auto;
+  height: 90px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  justify-content: left;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5%;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu a {
+  display: block;
+  padding: 7px;
+  color: #000000;
+  text-decoration: none;
+  text-align: end;
+  transition: color 0.3s;
+}
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a:hover {
+  color: #5f2905;
+}
+
+.burger {
+  width: 32px;
+  height: 90px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2.5px;
+  background-color: black;
+  margin-bottom: 7px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+/* ---------------------------  BURGER MENY MOBIL ----------------------------- */
+@media screen and (max-width: 800px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3%;
+    font-family: "Italiana", sans-serif;
+  }
+
+  .menu_logo img {
+    width: auto;
+    height: 65px;
+    margin-bottom: 55%;
+  }
+
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+    margin-top: 1px;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    position: absolute;
+    right: 6%;
+    top: 8%;
+    z-index: 1;
+    background-color: rgb(233, 224, 214);
+  }
+
+  nav.active .menu li {
+    margin: 1px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 20px;
+  }
+}
+
+/* ------------------------------  ANIMASJON PÅ FORSIDE MOB  ------------------------ */
+
+#animasjon_elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#screen {
+  width: 100%;
+  aspect-ratio: 12/9;
+  position: relative;
+  overflow: hidden;
+}
+
+/*-------- Hover effekt ---*/
+
+.klikk_hånd {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.klikk_hånd:hover {
+  transform: scale(1.1);
+}
+
+/*---------- Elementer  -------- */
+
+#kaffe_kane_container {
+  width: 15%;
+  aspect-ratio: 247/321;
+  position: absolute;
+  top: 9%;
+  right: 74%;
+}
+#kaffe_kanne_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(svg/kaffe_kanne.svg);
+}
+
+#kaffe_kop_container {
+  width: 21%;
+  aspect-ratio: 324/ 179;
+  position: absolute;
+  top: 49%;
+  right: 56%;
+  z-index: 1000;
+}
+#kaffe_kop_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(svg/kaffe_kop.svg);
+}
+
+#macbook_container {
+  width: 45%;
+  aspect-ratio: 805/ 450;
+  position: absolute;
+  top: 32%;
+  right: 16%;
+}
+#macbook_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(svg/pc_mac.svg);
+}
+
+#time_container {
+  width: 6%;
+  aspect-ratio: 120/412;
+  position: absolute;
+  top: 26.5%;
+  right: 67.5%;
+  z-index: 11000;
+}
+#time_sprite {
+  position: absolute;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#kaffe {
+  position: absolute;
+  background-image: url(svg/kaffe.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------------------------  ANIMASJON FORSIDE WEB  ----------------------------- */
+
+@media screen and (min-width: 800px) {
+  #screen {
+    width: 100%;
+    aspect-ratio: 16/6;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #kaffe_kane_container {
+    width: 11%;
+    aspect-ratio: 247/321;
+    position: absolute;
+    top: 17%;
+    right: 71%;
+  }
+
+  #kaffe_kop_container {
+    width: 14%;
+    aspect-ratio: 324/ 179;
+    position: absolute;
+    top: 66%;
+    right: 59%;
+    z-index: 1000;
+  }
+
+  #macbook_container {
+    width: 31%;
+    aspect-ratio: 805/ 450;
+    position: absolute;
+    top: 36%;
+    right: 33%;
+  }
+
+  #time_container {
+    width: 3.6%;
+    aspect-ratio: 120/412;
+    position: absolute;
+    top: 37.5%;
+    right: 66%;
+    z-index: 11000;
+  }
+}
+
+/*---------------------  Helle kaffe animasjon  ---------- */
+
+.time_animation {
+  animation-name: tid_kf;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes tid_kf {
+  0% {
+    clip-path: inset(0 0 100%);
+    background-image: url(svg/kaffe_fyll.svg);
+  }
+  100% {
+    clip-path: inset(0 0 0);
+    background-image: url(svg/kaffe_fyll.svg);
+  }
+}
+
+/*---------- Vippe Kaffekanne animasjon ---------- */
+.vipp {
+  animation-name: vipp_kf;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-duration: 5s;
+}
+@keyframes vipp_kf {
+  0% {
+    transform: rotate(0);
+  }
+
+  15% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+.delay {
+  animation-delay: 1s;
+}
+
+/*-------------------------------- PORTFOLIO SIDE MOBIL ---------- */
+.grid_8 {
+  padding: 0% 9% 9% 9%;
+}
+
+.col_1,
+.col_3,
+.col_2,
+.col_4 {
+  text-align: center;
+  border: 2px solid #31271a;
+  padding: 5%;
+  margin: 5%;
+  width: 85%;
+}
+/*---------- Hover effekt  ---------- */
+.col_1:hover {
+  transition-timing-function: ease-out;
+  transition: 1s;
+  transform: scale(1.05);
+}
+.col_2:hover {
+  transition-timing-function: ease-out;
+  transition: 1s;
+  transform: scale(1.05);
+}
+.col_3:hover {
+  transition-timing-function: ease-out;
+  transition: 1s;
+  transform: scale(1.05);
+}
+.col_4:hover {
+  transition-timing-function: ease-out;
+  transition: 1s;
+  transform: scale(1.05);
+}
+
+/*-------------------------------- PORTFOLIO SIDE WEB  ---------- */
+
+@media screen and (min-width: 800px) {
+  .grid_8 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 0% 9% 9% 9%;
+  }
+
+  .col_1,
+  .col_3 {
+    grid-column: 2 / span 2;
+    text-align: center;
+    border: 2px solid #31271a;
+    padding: 5%;
+    width: 100%;
+  }
+
+  .col_2,
+  .col_4 {
+    grid-column: 4 / span 2;
+    text-align: center;
+    border: 2px solid #31271a;
+    padding: 5%;
+    width: 100%;
+  }
+  /*---------- Hover effekt  ---------- */
+  .col_1:hover {
+    transition-timing-function: ease-out;
+    transition: 1s;
+    transform: scale(1.05);
+  }
+  .col_2:hover {
+    transition-timing-function: ease-out;
+    transition: 1s;
+    transform: scale(1.05);
+  }
+  .col_3:hover {
+    transition-timing-function: ease-out;
+    transition: 1s;
+    transform: scale(1.05);
+  }
+  .col_4:hover {
+    transition-timing-function: ease-out;
+    transition: 1s;
+    transform: scale(1.05);
+  }
+}
+
+/*----------------------------  OPPGAVE GRUNLEGENDE WEBSITE MOBIL ---------------------------- */
+
+.grid_1_1 {
+  padding: 5%;
+}
+
+.text {
+  margin: 2% 1% 2% 1%;
+}
+.tekst_mit {
+  text-align: center;
+}
+
+/*----------------------------  OPPGAVE GRUNLEGENDE WEBSITE, WEB ---------------------------- */
+
+@media screen and (min-width: 800px) {
+  .grid_1_1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr;
+    gap: 10px;
+    padding: 5%;
+  }
+
+  .tekst_mit {
+    display: grid;
+    text-align: center;
+  }
+}
+
+/*----------------------------  OM MEG MOBIL ---------------------------- */
+
+.grid_5 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 2%;
+}
+
+.img_1 {
+  grid-row: 1 / spand 2;
+}
+
+.img_1 img {
+  height: 100%;
+}
+.grid_2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 2%;
+  margin-top: 3%;
+}
+.center_overskrift {
+  text-align: center;
+  margin-top: 7%;
+}
+.cv_3 {
+  margin: 0% 2% 6% 2%;
+  padding: 1%;
+}
+.col_cv {
+  margin: 3%;
+}
+
+.col_cv h3 {
+  margin: 2%;
+  margin-top: 7%;
+  border-bottom: 1px solid #31271a;
+}
+
+.col_cv p {
+  margin: 3%;
+}
+
+/*----------------------------  OM MEG WEB  ---------------------------- */
+
+@media screen and (min-width: 800px) {
+  .grid_5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 2%;
+  }
+  .grid_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 2%;
+    font-family: "Taviraj", serif;
+    height: 50%;
+  }
+  .img_1 {
+    grid-row: 1;
+  }
+  .cv_3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0% 2% 6% 2%;
+    padding: 1%;
+  }
+  .col_cv {
+    margin: 1%;
+  }
+
+  .col_cv h3 {
+    margin: 2%;
+    border-bottom: 1px solid #31271a;
+  }
+
+  .col_cv p {
+    margin: 3%;
+  }
+}

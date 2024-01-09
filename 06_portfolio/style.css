@@ -1,0 +1,214 @@
+/* --------------- UNIVERSAL --------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Italiana", sans-serif;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+body {
+  background-color: #e9e0d6;
+}
+/* ------------------------------------------ MOBIL -------------------------------- */
+
+/* ----------- Knap ---------- */
+.knap a {
+  background-color: #31271a;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  width: fit-content;
+  border: none;
+  font-size: large;
+  color: white;
+  box-shadow: 4px 6px #31271a24;
+}
+.knap {
+  margin-top: 7%;
+}
+.knap:hover {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.02);
+}
+
+/* --------- Tekst størelser --------- */
+
+body {
+  line-height: 1.4;
+}
+
+h1 {
+  font-family: "Italiana", sans-serif;
+  font-size: 2.5rem;
+  color: black;
+}
+
+h2 {
+  font-family: "Italiana", sans-serif;
+  font-size: 2rem;
+  color: black;
+}
+
+h3 {
+  font-family: "Italiana", sans-serif;
+  font-size: 1.4rem;
+  color: black;
+}
+h4 {
+  font-family: "Italiana", sans-serif;
+  font-size: 1.4rem;
+  color: black;
+  margin-bottom: 20px;
+}
+
+p,
+li {
+  font-family: "Italiana", sans-serif;
+  font-size: 1rem;
+  color: black;
+}
+
+.overskrift {
+  text-align: end;
+  margin-right: 5%;
+}
+
+/* ---------- Fotter (Hentet fra Tema 2 ) ----------- */
+
+footer {
+  text-align: center;
+  padding: 2%;
+  border-top: 1px solid #31271a;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.follow-us {
+  font-size: 13px;
+  margin-bottom: 4px;
+  margin-top: 2%;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  color: #faf5ec;
+}
+
+.instagram-icon img,
+.facebook-icon img {
+  width: 20px;
+  height: 25px;
+  color: #faf5ec;
+}
+
+/* ------------------------------------- WEB ----------------------------------- */
+
+/* ---------- Knap----------- */
+
+@media screen and (min-width: 800px) {
+  .knap a {
+    background-color: #31271a;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    width: fit-content;
+    border: none;
+    font-family: "Work Sans", sans-serif;
+    font-size: large;
+    color: white;
+    box-shadow: 4px 6px #31271a24;
+  }
+
+  .knap {
+    margin-top: 5%;
+  }
+  .knap:hover {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.02);
+  }
+
+  /* --------- Tekst størelser ------------- */
+
+  body {
+    line-height: 1.4;
+  }
+
+  h1 {
+    font-family: "Italiana", sans-serif;
+    font-size: 4rem;
+    color: black;
+  }
+
+  h2 {
+    font-family: "Italiana", sans-serif;
+    font-size: 2.5rem;
+    color: black;
+  }
+
+  h3 {
+    font-family: "Italiana", sans-serif;
+    font-size: 1.8rem;
+    color: black;
+  }
+  h4 {
+    font-family: "Italiana", sans-serif;
+    font-size: 1.8rem;
+    color: black;
+    margin-bottom: 20px;
+  }
+
+  p,
+  li {
+    font-family: "Italiana", sans-serif;
+    font-size: 1rem;
+    color: black;
+  }
+
+  .overskrift {
+    text-align: end;
+    margin-right: 15%;
+  }
+
+  /* ----------- Fotter ------------- */
+
+  footer {
+    text-align: center;
+    padding: 2%;
+    border-top: 1px solid #31271a;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .follow-us {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 20px;
+    color: #faf5ec;
+  }
+
+  .instagram-icon img,
+  .facebook-icon img {
+    width: 30px;
+    height: 30px;
+    color: #faf5ec;
+  }
+}
